@@ -1,6 +1,6 @@
 # Introduction
 
-This project is based on [Nuzzgard](https://www.youtube.com/channel/UCzeJwNw3EBqZ570CQbFCSJw) ideia of making phasmophobia as rpg, all the credits go to him.
+This project is based on [Nuzzgard](https://www.youtube.com/channel/UCzeJwNw3EBqZ570CQbFCSJw) ideia of making phasmophobia as rpg, all the credits goes to him.
 
 # What is
 
