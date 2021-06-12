@@ -7,7 +7,7 @@ This project is based on [Nuzzgard](https://www.youtube.com/channel/UCzeJwNw3EBq
 Basically is an Electron-React app, where is randomly chosen your traits, showing their descriptions, and random chosen your items. 
 
 # Download Link
-[PhasmoRPG 2.0](https://drive.google.com/file/d/1nACtw0YwdZtUcTmIb3vRtTp4IY1JbmGP/view?usp=sharing)
+[PhasmoRPG 3.0](https://drive.google.com/file/d/1hy5SEmiBffaIIbNcUI5jFsiHL7mrJzZr/view?usp=sharing)
 
 ## Available Scripts
 
