@@ -27,6 +27,33 @@ header {
     -webkit-app-region: no-drag;
     -webkit-user-select: none;
 }
+.option-close {
+    color: #FFFAF0;
+    font-size: 1.5rem;
+    padding: 1px 15px;
+    border-radius: 0px 10px 0px 0px;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+}
+
+.option-close:hover {
+    background: #616161;
+}
+
+.file {
+    justify-content: center;
+    /* align-self: center; */
+    color: #FFFAF0;
+    font-size: 12px;
+    padding: 1px 10px;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+}
+
+.file:hover {
+    background: #616161;
+    
+}
 
 .option:hover {
     background: #616161;
@@ -36,9 +63,10 @@ header {
 display: flex;
 justify-content: center;
 align-items: center;
-display: flex;
+/* display: flex; */
 width: 22px;
-padding-left: 5px;
+padding-left: 10px;
+padding-right: 10px;
 
 }
 
@@ -47,6 +75,6 @@ padding-left: 5px;
     align-items: center;
     justify-content: center;
     color: whitesmoke;
-    margin-left: 10px;
-    margin-right: 390px;
+    margin-left: 100px;
+    margin-right: 199px;
 }

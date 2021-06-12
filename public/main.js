@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, dialog } = require('electron')
 
 const path = require('path')
 const isDev = require('electron-is-dev')
@@ -7,6 +7,8 @@ const ipcMain = require('electron').ipcMain;
 require('@electron/remote/main').initialize()
 
 let mainWindow;
+
+
 
 function createWindow() {
   // Create the browser window.
@@ -33,11 +35,19 @@ function createWindow() {
       : `file://${path.join(__dirname, '../build/index.html')}`
   )
 
-  if(isDev) {
+  if (isDev) {
     mainWindow.webContents.openDevTools();
   }
 
 }
+
+let optionsDead = {
+  type: 'question',
+  buttons: ["Yes", "No",],
+  title: 'Dead',
+  message: "Are you sure?"
+}
+
 ipcMain.handle('close-event', () => {
   app.quit()
 })
@@ -45,6 +55,40 @@ ipcMain.handle('close-event', () => {
 ipcMain.handle('minimize-event', () => {
   mainWindow.minimize()
 })
+
+ipcMain.handle('dead-event', async (event) => { //comunicação entre electron e react, 
+  //com a resposta do electron (https://www.electronjs.org/docs/api/ipc-main)
+  const choice = await dialog.showMessageBox(optionsDead)
+  return choice.response
+})
+
+const optionsSave = {
+  defaultPath: app.getPath('documents'),
+  filters: [
+    { name: 'Text Files', extensions: ['txt']}
+  ]
+}
+
+ipcMain.handle('save-char', async (event, args) => {
+  const path = await dialog.showSaveDialog(mainWindow, optionsSave)
+  return path
+})
+
+console.log(app.getPath('documents'))
+
+const optionsLoad = {
+  defaultPath: app.getPath('documents'),
+  filters: [
+    { name: 'Text Files', extensions: ['txt']}
+  ]
+}
+
+ipcMain.handle('load-char', async(event, args) => {
+  const file = await dialog.showOpenDialog(mainWindow, optionsLoad )
+  return file
+} )
+
+// app.getAppPath path of the app
 
 app.on('ready', createWindow)
 
