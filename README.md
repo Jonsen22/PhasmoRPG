@@ -4,7 +4,7 @@ This project is based on [Nuzzgard](https://www.youtube.com/channel/UCzeJwNw3EBq
 
 # What is
 
-Basically is an Electron-React app, where is randomly chosen your traits, showing their descriptions, and random chosen your items. 
+Basically is an Electron-React app, where is randomly chosen your traits, showing their descriptions, and random choose your items. 
 
 # Download Link
 [PhasmoRPG 3.0](https://drive.google.com/file/d/1hy5SEmiBffaIIbNcUI5jFsiHL7mrJzZr/view?usp=sharing)
